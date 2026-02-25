@@ -1,0 +1,53 @@
+index.html <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>💰 Personal Finance Tracker</h1>
+
+    <div class="summary">
+        <div>
+            <h3>Balance</h3>
+            <p id="balance">$0.00</p>
+        </div>
+        <div>
+            <h3>Income</h3>
+            <p id="income" class="income">$0.00</p>
+        </div>
+        <div>
+            <h3>Expenses</h3>
+            <p id="expenses" class="expense">$0.00</p>
+        </div>
+    </div>
+
+    <form id="transaction-form">
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount (use - for expense)" required>
+        <input type="date" id="date" required>
+        <select id="category">
+            <option>Food</option>
+            <option>Rent</option>
+            <option>Utilities</option>
+            <option>Entertainment</option>
+            <option>Salary</option>
+            <option>Other</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="filters">
+        <input type="month" id="filter-month">
+        <button onclick="exportCSV()">Export CSV</button>
+    </div>
+
+    <ul id="transaction-list"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
