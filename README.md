@@ -1,2 +1,0 @@
-# Income
-Personal finance tracker
